@@ -10,7 +10,7 @@ const StyledRoot = styled.div`
   padding: 5px;
   width: 20%;
   //min-height: 60%;
-  background: azure;
+  //background: azure;
   border: 1px solid #eceff133;
   border-radius: 24px;
 `;
@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = (props) => {
   const [isCardDone, setCardDone] = useState<boolean>(false);
 
   return (
-    <StyledRoot style={isCardDone ? { background: '#38d98d' } : { background: 'azure' }}>
+    <StyledRoot style={isCardDone ? { background: '#38d98d' } : { background: '#fff' }}>
       <CardTop
         labelText={text}
         cardRemoveFunction={cardRemoveFunction}
