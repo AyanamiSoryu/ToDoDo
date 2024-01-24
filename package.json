@@ -6,7 +6,8 @@
   "scripts": {
     "eslint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx --cache",
     "serve": "npx webpack serve",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "deploy": "npx gh-pages -d ./dist"
   },
   "author": "@AyanamiSoryu",
   "license": "ISC",
