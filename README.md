@@ -2,6 +2,33 @@
 
 ToDoDo is a pet project inspired by the principles of Atomic design and Block Element Modifier (BEM). It serves as a platform for implementing ideas and incorporating the latest technical solutions in both frontend and backend development. At its core, ToDoDo is a to-do list application.
 
+**Project Structuring Rules for ToDoDo on React.js**
+
+The project structure for ToDoDo in React.js consists of four main directories:
+
+1. **Atoms:**
+  - Definition: Atoms represent the simplest units of the application, often in the form of components like `<StyledButton>`.
+  - Usage: Atoms are building blocks for more complex, composite components.
+  - Restrictions: Components in the Atoms directory are not allowed to reference other components. This restriction ensures a clear vertical hierarchy and avoids subordination conflicts.
+  - Best Practice: The primary logic for UI elements should be defined in components one level above Atoms.
+  - Atom Tasks: Declare interface elements with the ability for styling and reuse.
+
+2. **Organisms:**
+  - Definition: Organisms are components of unrestricted structure and complexity, tasked with implementing the core project logic. Examples include components like `<Card>`.
+  - No Restrictions: There are no specific prohibitions within this directory.
+  - Best Practice: Avoid referencing components from the same Organisms directory, maintaining a logical sequence in inheritance.
+
+3. **Symbiosis:**
+  - Definition: Symbiosis components essentially act as routers on the path to App, combining two or more components from the Organisms directory.
+  - Restrictions: Components in this directory are not allowed to reference other components within the same directory.
+  - Tasks: Simplify the logical readability of code structure.
+
+4. **Page:**
+  - Definition: The Page directory corresponds to the App, responsible for rendering the code.
+  - Tasks: Render the code.
+
+These rules aim to bring clarity and organization to the project structure, promoting a clean separation of concerns and logical flow within the React.js application.
+
 # Project Structure
 
 The ToDoDo project follows a well-organized structure for maintaining clarity and modularity.
@@ -17,9 +44,8 @@ The ToDoDo project follows a well-organized structure for maintaining clarity an
         /App.tsx
       /components
         /atoms
-        /molecules
         /organisms
-        /templates
+        /symbiosis
     /utils
   /package.json
   /tsconfig.json
@@ -50,15 +76,11 @@ The `/components` directory holds reusable components categorized by functionali
 
 The "atoms" directory serves as the home for Atoms, the basic building blocks of matter in our design system. In a web interface context, atoms are equivalent to components such as form labels, inputs, or buttons. These are the smallest, indivisible elements that form the foundation of our user interface.
 
-##### `/molecules`
-
-Within the "molecules" directory, you'll find Molecules, which are groups of atoms bonded together. Molecules represent the smallest fundamental units of a compound in our design system. These groups of atoms form cohesive units that possess their own properties, serving as the backbone of our design systems.
-
 ##### `/organisms`
 
 Moving up the hierarchy, the "organisms" directory houses Organisms. Organisms are groups of molecules joined together to create relatively complex and distinct sections of the interface. These entities are more intricate than molecules and contribute to the overall structure of the application.
 
-##### `/templates`
+##### `/symbiosis`
 
 The "templates" directory contains Templates that consist mostly of groups of organisms stitched together. Templates represent higher-level structures where we begin to see the design coming together. This level introduces concepts like layout and represents a more comprehensive view of the application structure.
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import CardInput from '../../atoms/CardInput/CardInput';
 import DoneButton from '../../atoms/DoneButton/DoneButton';
-import CardTop from '../../molecules/CardTop/CardTop';
+import CardTop from '../CardTop/CardTop';
 
 const StyledRoot = styled.div`
   position: relative;
