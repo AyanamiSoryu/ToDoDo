@@ -4,13 +4,16 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const StyledButton = styled.div`
   border-radius: 100px;
-  background: blue;
+  background: #f5f5f5;
   display: flex;
   width: 40px;
   height: 40px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  color: #202020;
+  //box-shadow: 0 0 #e6e6e6;
+  box-shadow: 3px 1px 10px 2px #e6e6e6;
 `;
 
 type AddCardButtonProps = {

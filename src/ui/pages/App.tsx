@@ -5,7 +5,7 @@ import Header from '../components/organisms/Header/Header';
 import CardZone from '../components/symbiosis/CardZone/CardZone';
 
 const StyledRoot = styled.div`
-  background: #212121;
+  background: #e6e6e6;
   height: 100vh;
 `;
 
